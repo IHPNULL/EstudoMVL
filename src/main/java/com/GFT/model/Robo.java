@@ -1,18 +1,17 @@
 package com.GFT.model;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 public class Robo {
+	
+	Date cadastro = new Date();
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +22,8 @@ public class Robo {
 	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
 	
-	@Temporal(TemporalType.DATE)
-	private Date cadastro;
+	//@Temporal(TemporalType.DATE)
+	//private Date cadastro = x;
 	
 	@Enumerated(EnumType.STRING)
 	private Statusrobo status;
@@ -57,10 +56,11 @@ public class Robo {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	public Date getCadastro() {
-		return cadastro;
+	public Date getCadastro()
+	{
+		return this.cadastro;
 	}
-	public void setCadastro(Date cadastro) {
+	public void setCadastro(Date cadastro) {		
 		this.cadastro = cadastro;
 	}
 	public Statusrobo getStatus() {
