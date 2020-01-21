@@ -1,0 +1,11 @@
+.btn-group{
+    position:absolute; 
+    top:10%;
+    left:75%;
+    transform: translate(-50%, -50%);
+}
+
+
+.navbar-brand {
+	padding-left: 80px;
+}

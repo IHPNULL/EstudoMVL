@@ -1,0 +1,29 @@
+body {
+    background: rgb(209, 24, 24);
+}
+.navbar-brand {
+	padding-left: 80px;
+}
+
+.form-group {
+	margin: 20px;
+}
+
+.input-group-addon {
+	margin-right:800px;
+}
+
+.panel {
+	margin-top:100px;
+	margin-left:300px;
+	margin-right:300px;
+}
+
+h1 {
+	margin-top:60px;
+	margin-left: 225px;
+}
+
+.col-sm-2 control-label {
+	margin-bottom:60px;
+}
