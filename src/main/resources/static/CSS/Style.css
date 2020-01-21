@@ -1,6 +1,11 @@
 body {
     background: #DF3B3B;
 }
+.alert{
+	margin-left: 25%;
+	margin-right: 25%;
+	font-size: 150%;
+}
 .navbar-brand {
 	padding-left: 100%;
 }
@@ -14,12 +19,12 @@ body {
 }
 
 .panel {
-	margin-top:5%;
-	margin-left:15%;
-	margin-right:15%;
+	margin-left: 15%;
+	margin-right: 15%;
+
 }
 
-h1 {
+h1{
 	margin-top:10%;
 	margin-left: 11%;
 }
