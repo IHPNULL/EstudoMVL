@@ -1,11 +1,17 @@
 package com.GFT.controler;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.GFT.model.Robo;
+import com.GFT.model.Statusrobo;
 import com.GFT.repository.Robos;
 
 @Controller
@@ -16,19 +22,22 @@ public class tituloscontroler {
 	private Robos robos; 
 	
 	@RequestMapping("/novo")
-	public String novo()	
-	{
-		return "CadastroRobo";
+	public ModelAndView novo() {
+		ModelAndView mv = new ModelAndView("Cadastrorobo");
+		mv.addObject("todosStatusrobo", Statusrobo.values());
+		return mv;
 	}
 	
-	
 	@RequestMapping(method = RequestMethod.POST)
-	public String salvar(Robo Robo) {
-		//TODO: Salvar no banco de dados
-		//System.out.println("\n>>" + Robo.getEquipe() + "\n>>" + Robo.getCategoria() + "\n>>" + Robo.getNome() + "\n>>" + Robo.getStatus());
-		
+	public ModelAndView salvar(Robo Robo) {	
 		robos.save(Robo);
-		
-		return "CadastroRobo";
+		ModelAndView mv = new ModelAndView("Cadastrorobo");
+		mv.addObject("mensagem", "Robo salvo com sucesso!");
+		return mv;
+	}
+	
+	@ModelAttribute("todosStatusrobo")
+	public List<Statusrobo> todosStatusrobo(){
+		return  Arrays.asList(Statusrobo.values());
 	}
 }

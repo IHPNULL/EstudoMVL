@@ -1,12 +1,15 @@
 package com.GFT.model;
 
 import java.util.Date;
+
+
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 
 @Entity
 public class Robo {
@@ -18,20 +21,25 @@ public class Robo {
 	private Long codigo;
 	
 	private String nome;
+	@Enumerated(EnumType.STRING)
+	private Statusrobo statusrobo;
+	
+	private String equipe;
 	
 	@Enumerated(EnumType.STRING)
 	private Categoria categoria;
 	
-	//@Temporal(TemporalType.DATE)
-	//private Date cadastro = x;
-	
-	@Enumerated(EnumType.STRING)
-	private Statusrobo status;
-	
-	private String equipe;
-
 	
 	
+	public Statusrobo getStatusrobo() {
+		return statusrobo;
+	}
+	public void setStatusrobo(Statusrobo statusrobo) {
+		this.statusrobo = statusrobo;
+	}
+	public void setCadastro(Date cadastro) {
+		this.cadastro = cadastro;
+	}
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -60,15 +68,7 @@ public class Robo {
 	{
 		return this.cadastro;
 	}
-	public void setCadastro(Date cadastro) {		
-		this.cadastro = cadastro;
-	}
-	public Statusrobo getStatus() {
-		return status;
-	}
-	public void setStatus(Statusrobo status) {
-		this.status = status;
-	}
+	
 	
 	@Override
 	public int hashCode() {

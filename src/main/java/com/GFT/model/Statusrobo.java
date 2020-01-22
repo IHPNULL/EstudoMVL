@@ -1,6 +1,5 @@
 package com.GFT.model;
 
-
 public enum Statusrobo {
 	ATIVO("ATIVO"),
 	APOSENTADO("APOSENTADO"),

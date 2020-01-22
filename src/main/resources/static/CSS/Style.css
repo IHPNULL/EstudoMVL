@@ -6,8 +6,8 @@ body {
 	margin-right: 25%;
 	font-size: 150%;
 }
-.navbar-brand {
-	padding-left: 100%;
+.navbar-header {
+	padding-left: 10%;
 }
 
 .form-group {
@@ -19,6 +19,7 @@ body {
 }
 
 .panel {
+	margin-top:5%;
 	margin-left: 15%;
 	margin-right: 15%;
 
