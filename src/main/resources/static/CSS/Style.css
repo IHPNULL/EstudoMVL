@@ -2,8 +2,9 @@ body {
     background: #DF3B3B;
 }
 .alert{
-	margin-left: 25%;
-	margin-right: 25%;
+	position: fixed;
+	left: 25%;
+	right: 25%;
 	font-size: 150%;
 }
 .navbar-header {
@@ -14,22 +15,18 @@ body {
 	margin: 1%;
 }
 
-.input-group-addon {
-	margin-right:5%;
+
+.relative2 {
+  position: relative;
+  top: 80px;
+  left: 23%;
+  background-color: white;
+  width: 53%;
 }
 
-.panel {
-	margin-top:5%;
-	margin-left: 15%;
-	margin-right: 15%;
-
-}
-
-h1{
-	margin-top:10%;
-	margin-left: 11%;
-}
-
-.col-sm-2 control-label {
-	margin-bottom:20%;
+button{
+  position: relative;
+  top: 10px;
+  left: 85%;
+  width: 10%;
 }

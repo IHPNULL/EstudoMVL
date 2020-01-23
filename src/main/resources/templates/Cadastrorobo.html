@@ -18,14 +18,18 @@
 			</div>
 		</div>
 	</nav>
-	
+
 	<form class = "form-horizontal" method="post" action="/Robos">
-		<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-			<span th:text="${mensagem}"></span>
+	
+
+		<div id="alert" class="relative1">
+			<div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+					<span th:text="${mensagem}"></span>
+			</div>
 		</div>
 
 	
-		<div class="panel panel-default">
+		<div class="relative2">
 			<div class="panel-heading">
 				<h3 class="panel-title">CADASTRO DE ROBO</h3>
 			</div>

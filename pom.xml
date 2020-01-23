@@ -8,11 +8,11 @@
 		<version>2.2.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.GFT</groupId>
-	<artifactId>casadeshow</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>cobranca</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>casadeshow</name>
+	<name>cobranca</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -39,11 +39,12 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+	
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+	
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
